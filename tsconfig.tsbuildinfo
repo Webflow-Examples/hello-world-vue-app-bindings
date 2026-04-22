@@ -1,0 +1,1 @@
+{"root":["./src/env.d.ts","./src/main.ts","./src/app.vue","./src/components/bindingsstatus.vue","./src/components/doccard.vue","./src/components/webflowlogo.vue","./worker/index.ts","./worker/routes/binding-status.ts"],"version":"5.8.3"}
