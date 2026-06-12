@@ -2,6 +2,7 @@
 import WebflowLogo from './components/WebflowLogo.vue';
 import DocCard from './components/DocCard.vue';
 import BindingsStatus from './components/BindingsStatus.vue';
+import SentryPinger from './components/SentryPinger.vue';
 
 const FRAMEWORK = 'Vue 3 + Vite';
 
@@ -65,6 +66,8 @@ const DOC_LINKS = [
       </section>
 
       <BindingsStatus />
+
+      <SentryPinger />
 
       <section class="wf-cards" aria-label="Documentation" style="margin-top: 32px">
         <DocCard v-for="l in DOC_LINKS" :key="l.href" v-bind="l" />

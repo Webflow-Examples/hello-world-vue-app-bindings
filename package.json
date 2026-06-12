@@ -10,6 +10,8 @@
     "cf:types": "wrangler types"
   },
   "dependencies": {
+    "@sentry/cloudflare": "^10.57.0",
+    "@sentry/vue": "^10.57.0",
     "vue": "^3.5.14"
   },
   "devDependencies": {
