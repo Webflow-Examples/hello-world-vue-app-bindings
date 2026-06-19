@@ -1,6 +1,7 @@
 /// <reference types="@cloudflare/workers-types" />
 
 import { handleBindingStatus } from "./routes/binding-status";
+import { handleEnvDebug } from "./routes/env-debug";
 
 export interface Env {
   DB: D1Database;
@@ -17,6 +18,10 @@ export default {
     // so match from /api/ onward so routing works regardless of mount.
     const apiIndex = url.pathname.indexOf("/api/");
     const path = apiIndex !== -1 ? url.pathname.slice(apiIndex) : url.pathname;
+
+    if (path === "/api/env-debug") {
+      return handleEnvDebug(request, env);
+    }
 
     if (path === "/api/binding-status") {
       return handleBindingStatus(request, env);
